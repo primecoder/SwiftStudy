@@ -1,8 +1,9 @@
 /*:
  Study Escaping Function/Closure
 
- What is Escaping Closure?
+ Demonstrates one of the scenario where escaping closure is needed.
 
+ What is Escaping Closure?
     A closure is said to escape a function when the closure is passed as an argument to the function, but is called after the function returns.
     (from: https://docs.swift.org/swift-book/LanguageGuide/Closures.html)
 
@@ -14,24 +15,18 @@ import Foundation
 /**
  This simulates a function which will be called inside the long-running operation.
  */
-func announceMsg(_ msg: String) {
-    print(msg)
-}
+func announceMsg(_ msg: String) {print(msg)}
 
 /**
  This function simulates the long-running operation in asynchronous mode - it does not block the execution and returns immediately.
  Note, it demonstrates calling the same function at 2 different places:
 
- 1. Outside asynchronous block.
+ 1. Inside the function
 
-    This demonstrates normal function call where a function resides within the same dispatch-queue as the caller.
-
- 2. Inside asynchronous queue
-
-    This demonstrates that a function/closure is called in a different dispatch-queue from the parent.
+ 2. Outside the function (part of asyn queue)
     By the time a function is called, the caller (parent) may already exit.
  */
-func longRunningOp2(_ opName: String,
+func longRunningOp(_ opName: String,
                     delaySecond: Int,
                     announcer: (String) -> (),
                     escapingAnnouncer: @escaping (String) -> ()) {
@@ -47,14 +42,16 @@ func longRunningOp2(_ opName: String,
 }
 
 // Calling with functions
-longRunningOp2("A2", delaySecond: 10, announcer: announceMsg(_:), escapingAnnouncer: announceMsg(_:))
+longRunningOp("A2",
+              delaySecond: 10,
+              announcer: announceMsg(_:),
+              escapingAnnouncer: announceMsg(_:))
 
 // Calling with closure blocks
-longRunningOp2("B2", delaySecond: 3, announcer: { (msg) in
-    print("(closure) \(msg)")
-}) { (msg) in
-    print("(escaping closure) \(msg)")
-}
+longRunningOp("B2",
+              delaySecond: 3,
+              announcer: {(msg) in print("(closure) \(msg)")}
+    ) {(msg) in print("(escaping closure) \(msg)")}
 
 
 /*:

@@ -3,5 +3,6 @@
     <pages>
         <page name='longRunningOp'/>
         <page name='escapeClosure'/>
+        <page name='escapeClosure2'/>
     </pages>
 </playground>
