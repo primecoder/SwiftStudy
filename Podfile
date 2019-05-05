@@ -1,10 +1,13 @@
 # Podfile
 
+platform :ios,'12.2'
 use_frameworks!
 
-workspace 'TDD-BDD'
+workspace 'SwiftStudy'
+project 'DummyProject/DummyProject.xcodeproj'
 
-def testing_pods
+target 'DummyProject' do
+    pod 'SwiftyJSON'
     pod 'Quick'
     pod 'Nimble'
 end

@@ -5,6 +5,9 @@
       location = "group:Podfile">
    </FileRef>
    <FileRef
-      location = "group:SwiftStudy.playground">
+      location = "group:DummyProject/DummyProject.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
