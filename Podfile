@@ -10,4 +10,5 @@ target 'DummyProject' do
     pod 'SwiftyJSON'
     pod 'Quick'
     pod 'Nimble'
+    pod 'Alamofire'
 end
