@@ -7,7 +7,7 @@ import SwiftyJSON
 
 var str = "Hello, playground"
 
-guard let url = URL(string: "http://demo3511160.mockable.io/hellox") else {
+guard let url = URL(string: "http://demo3511160.mockable.io/hello") else {
     exit(0)
 }
 
