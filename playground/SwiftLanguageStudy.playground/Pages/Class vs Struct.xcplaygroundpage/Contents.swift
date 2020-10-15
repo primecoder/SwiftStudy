@@ -26,14 +26,9 @@
 
  - Author: Ace Authors
 
- - Date: 2020.09.24 - Created
+ - Date: 2020.09.24 - Created, Xcode 12, Swift 5.3
 
  */
-
-// To Do:
-// [x] Struct samples and usage
-// [x] Class samples and usage
-// [ ] Subscripts samples and usage
 
 // Do we need Foundation here? Yes, for `@objc` directive.
 import Foundation
