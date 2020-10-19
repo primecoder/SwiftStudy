@@ -4,5 +4,7 @@
         <page name='Simplest Combine'/>
         <page name='Subject - Passthrough'/>
         <page name='Subject - CurrentValue'/>
+        <page name='Timer using Combine'/>
+        <page name='KVO'/>
     </pages>
 </playground>
