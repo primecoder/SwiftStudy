@@ -6,5 +6,6 @@
         <page name='Subject - CurrentValue'/>
         <page name='Timer using Combine'/>
         <page name='KVO'/>
+        <page name='JSON decoder'/>
     </pages>
 </playground>
