@@ -1,3 +1,7 @@
+/// The simplest form of using Combine to decode JSON data.
+///
+/// - Author: Ace Authors
+///
 import Foundation
 import Combine
 
