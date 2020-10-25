@@ -7,6 +7,7 @@ import Foundation
 
 // MARK: - Review
 // Created using app.quicktype.io
+// To be able to share with pages in playground, 'public' keyword must be declared.
 public struct Review: Codable {
     public let text: String
     public let label: Label

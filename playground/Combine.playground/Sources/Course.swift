@@ -30,12 +30,18 @@
 import Foundation
 
 // MARK: - Course
-// Course of events
-struct Course: Codable {
-    let events: [Event]
+
+/// Course of events
+/// To be able to share with pages in playground, 'public' keyword must be declared.
+public struct Course: Codable {
+    public let events: [Event]
 }
 
 // MARK: - Event
-struct Event: Codable {
-    let datetime, title: String
+
+/// Represent individual event.
+/// To be able to share with pages in playground, 'public' keyword must be declared.
+public struct Event: Codable {
+    public let datetime: String
+    public let title: String
 }
