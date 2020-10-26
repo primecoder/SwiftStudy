@@ -10,6 +10,7 @@
         <page name='JSON decoder - Combine'/>
         <page name='JSON decoder - Combine 2'/>
         <page name='JSON decode - Combine 3'/>
+        <page name='URL Session - simplest'/>
         <page name='URL Session - no Combine'/>
     </pages>
 </playground>

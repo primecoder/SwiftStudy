@@ -5,6 +5,20 @@
 
  $ curl http://pi-one:5000/events/api/v1.0/mock
 
+ NOTE that on iOS app, the project's info.plist must contain the following property. This
+ is required to bypass iOS security restriction.
+ 
+ NOTE this workaround should only be used for testing/debugging purposes only - not for production uses.
+ 
+        NSAllowsArbitraryLoads = YES
+
+    Or
+ 
+         <dict>
+             <key>NSAllowsArbitraryLoads</key>
+             <true/>
+         </dict>
+
  Data structure is as follow:
 
  {
@@ -28,6 +42,7 @@
 
 
 import Foundation
+import Combine
 
 // MARK: - Course
 
@@ -52,8 +67,11 @@ protocol EventServerDelegate {
     func eventsDidLoad()
 }
 
+let defaultServiceEndPoint = "http://pi-one:5000/events/api/v1.0/mock"
+
+/// Demonstrate Event service provider without using Combine.
 class EventService {
-    let serviceEndPoint = "http://pi-one:5000/events/api/v1.0/mock"
+    let serviceEndPoint = defaultServiceEndPoint
     
     var course = Course(events: [])
     
@@ -68,7 +86,12 @@ class EventService {
             return
         }
         
-        let task = URLSession.shared.dataTask(with: url) { [self] (data, response, error) in
+        let task = URLSession.shared.dataTask(with: url) { [weak self] (data, response, error) in
+            guard let _ = self else {
+                print("ERROR> No self!")
+                return
+            }
+            
             if let _ = error {
                 print("ERROR> network error")
                 return
@@ -87,10 +110,10 @@ class EventService {
 
             do {
                 let course = try JSONDecoder().decode(Course.self, from: data)
-                let sortedEvents = course.events.sorted { $0.datetime < $1.datetime }
-                self.course = Course(events: sortedEvents)
-                print("Loaded courses: \(self.course.events.count)")
-                self.delegate?.eventsDidLoad()
+                let sortedEvents = course.events.sorted { $0.datetime > $1.datetime }
+                self!.course = Course(events: sortedEvents)
+                print("Loaded courses: \(self!.course.events.count)")
+                self!.delegate?.eventsDidLoad()
             } catch {
                 print("ERROR> \(error)")
             }
@@ -98,6 +121,25 @@ class EventService {
         }
         
         task.resume()
+    }
+
+}
+
+
+/// Demonstrate Event service provider using Combine framework.
+class EventCombineService {
+    
+    let serviceEndPoint = defaultServiceEndPoint
+    
+    func fetchData() -> AnyPublisher<Course, Error> {
+        guard let url = URL(string: serviceEndPoint) else {
+            return Empty<Course, Error>().eraseToAnyPublisher()
+        }
+            
+        return URLSession.shared.dataTaskPublisher(for: url)
+            .map {$0.data}
+            .decode(type: Course.self, decoder: JSONDecoder())
+            .eraseToAnyPublisher()
     }
 
 }

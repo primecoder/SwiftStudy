@@ -6,16 +6,6 @@
 /// - author: Ace Authors (aa)
 ///
 
-import Foundation
-
-let url = URL(string: "http://pi-one:5000/events/api/v1.0/mock")!
-
-// Simplest form of URLSession.
-let task = URLSession.shared.dataTask(with: url) { data, response, error in
-    if let resp = response { print("Response> \(resp)") }
-}
-task.resume()
-
 // More complex
 let task2 = URLSession.shared.dataTask(with: url) { data, response, error in
     if let error  = error {

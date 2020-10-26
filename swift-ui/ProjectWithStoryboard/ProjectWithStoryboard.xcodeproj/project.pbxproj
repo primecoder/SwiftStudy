@@ -17,6 +17,7 @@
 		E1D19E612546399C00143694 /* ProjectWithStoryboardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D19E602546399C00143694 /* ProjectWithStoryboardUITests.swift */; };
 		E1D19E76254642F000143694 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D19E75254642F000143694 /* Course.swift */; };
 		E1D19E7F2546560200143694 /* SimpleEventModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D19E7E2546560100143694 /* SimpleEventModelView.swift */; };
+		E1D19E87254677D200143694 /* CombineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D19E86254677D200143694 /* CombineViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		E1D19E622546399C00143694 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1D19E75254642F000143694 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		E1D19E7E2546560100143694 /* SimpleEventModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleEventModelView.swift; sourceTree = "<group>"; };
+		E1D19E86254677D200143694 /* CombineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				E1D19E3E2546399A00143694 /* AppDelegate.swift */,
 				E1D19E402546399A00143694 /* SceneDelegate.swift */,
 				E1D19E422546399A00143694 /* ViewController.swift */,
+				E1D19E86254677D200143694 /* CombineViewController.swift */,
 				E1D19E442546399A00143694 /* Main.storyboard */,
 				E1D19E472546399B00143694 /* Assets.xcassets */,
 				E1D19E492546399B00143694 /* LaunchScreen.storyboard */,
@@ -284,6 +287,7 @@
 				E1D19E432546399A00143694 /* ViewController.swift in Sources */,
 				E1D19E3F2546399A00143694 /* AppDelegate.swift in Sources */,
 				E1D19E7F2546560200143694 /* SimpleEventModelView.swift in Sources */,
+				E1D19E87254677D200143694 /* CombineViewController.swift in Sources */,
 				E1D19E412546399A00143694 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
