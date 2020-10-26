@@ -138,6 +138,7 @@
 		E1D19E322546399A00143694 = {
 			isa = PBXGroup;
 			children = (
+				E1D19E74254642BE00143694 /* Model */,
 				E1D19E3D2546399A00143694 /* ProjectWithStoryboard */,
 				E1D19E542546399C00143694 /* ProjectWithStoryboardTests */,
 				E1D19E5F2546399C00143694 /* ProjectWithStoryboardUITests */,
@@ -165,7 +166,6 @@
 			isa = PBXGroup;
 			children = (
 				E1D19E7D254655DC00143694 /* ModelView */,
-				E1D19E74254642BE00143694 /* Model */,
 				E1D19E3E2546399A00143694 /* AppDelegate.swift */,
 				E1D19E402546399A00143694 /* SceneDelegate.swift */,
 				E1D19E422546399A00143694 /* ViewController.swift */,
