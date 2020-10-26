@@ -143,3 +143,25 @@ class EventCombineService {
     }
 
 }
+
+/// Demonstrate using Combine + SwiftUI
+class CourseModel: ObservableObject {
+    @Published var course = Course(events: [])
+    
+    var eventCombineService = EventCombineService()
+    
+    var cancellable: Cancellable?
+    
+    func load() {
+        cancellable = eventCombineService.fetchData()
+            .receive(on: RunLoop.main)
+            .sink { (error) in
+                print("Done fetch")
+            } receiveValue: { (course) in
+                self.course = course
+            }
+
+    }
+}
+
+
