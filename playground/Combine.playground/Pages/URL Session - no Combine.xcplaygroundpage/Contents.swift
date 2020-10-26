@@ -6,6 +6,10 @@
 /// - author: Ace Authors (aa)
 ///
 
+import Foundation
+
+let url = URL(string: "http://pi-one:5000/events/api/v1.0/mock")!
+
 // More complex
 let task2 = URLSession.shared.dataTask(with: url) { data, response, error in
     if let error  = error {
