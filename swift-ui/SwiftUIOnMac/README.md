@@ -6,4 +6,3 @@ Xcode project 'SwiftUIOnMac' represents the simplest form of creating Mac app us
 SwiftUI.
 
 
-Author: Ace Authors
