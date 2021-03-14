@@ -26,7 +26,6 @@
 		5C7136AD227D900B00E0ED07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C7136AF227D900B00E0ED07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5CB6B37F227DA367009E2A54 /* SwiftStudy2.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SwiftStudy2.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		5CE4434425FD82C6001C0F21 /* ObjSerialisation.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ObjSerialisation.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		5F6E266A7CC30AC71AEF03CF /* Pods-DummyProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DummyProject.debug.xcconfig"; path = "Target Support Files/Pods-DummyProject/Pods-DummyProject.debug.xcconfig"; sourceTree = "<group>"; };
 		AFA4F33A6091B1DB951BF3BE /* Pods_DummyProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DummyProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -46,7 +45,6 @@
 		5C713697227D900900E0ED07 = {
 			isa = PBXGroup;
 			children = (
-				5CE4434425FD82C6001C0F21 /* ObjSerialisation.playground */,
 				5C6E9A30227DA63C007AA990 /* SwiftStudy.playground */,
 				5CB6B37F227DA367009E2A54 /* SwiftStudy2.playground */,
 				5C7136A2227D900900E0ED07 /* DummyProject */,
