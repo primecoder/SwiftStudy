@@ -1,0 +1,27 @@
+
+[
+    { "text": "Fantastic!", "label": "positive" },
+    { "text": "The movie was fantastic!", "label": "positive" },
+    { "text": "Fell asleep.", "label": "negative" },
+    { "text": "Very boring. Fell asleep.", "label": "negative" },
+    { "text": "Very boring.", "label": "negative" },
+    { "text": "Boring.", "label": "negative" },
+    { "text": "It was just OK.", "label": "neutral" },
+    { "text": "I love this movie", "label": "positive" },
+    { "text": "Love it!", "label": "positive" },
+    { "text": "Don't waste time", "label": "negative" },
+    { "text": "Meh", "label": "neutral" },
+    { "text": "OK. I guess", "label": "neutral" },
+    { "text": "Fair", "label": "neutral" },
+    { "text": "The move was alright", "label": "neutral" },
+    { "text": "I want my money back", "label": "negative" },
+    { "text": "I don't like it", "label": "negative" },
+    { "text": "Hate it!", "label": "negative" },
+    { "text": "I hate it!", "label": "negative" },
+    { "text": "I hate this", "label": "negative" },
+    { "text": "Mundane", "label": "negative" },
+    { "text": "This movie will dull your day", "label": "negative" },
+    { "text": "I watched this movie 3 times!", "label": "positive" },
+    { "text": "WTF!", "label": "negative" }
+
+]
