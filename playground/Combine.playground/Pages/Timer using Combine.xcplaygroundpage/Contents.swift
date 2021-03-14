@@ -16,7 +16,7 @@ let cancellable = Timer.publish(every: 1, on: .main, in: .default)
 
 
 // NOTE:
-// - Need to store the value returned by 'zink' (in cancellable2) to keep it in scope,
+// - Need to store the value returned by 'sink' (in cancellable2) to keep it in scope,
 //   or else the timer will not run.
 var repeatCount = 0
 let timer = Timer.publish(every: 1, on: .main, in: .default)
@@ -31,6 +31,7 @@ let cancellable2 = timer.sink(receiveCompletion: { _ in
     }
 })
 
+// When not using autoconnect(), 
 // This will start the timer and run the code block above.
 timer.connect()
 
