@@ -15,6 +15,7 @@ struct BottomSheetView<Content: View>: View {
     let content: Content
     let snapRatio: CGFloat = 0.25
     let radius = CGFloat(16)
+    let bgColor = Color(UIColor(red: 0.862, green: 0.862, blue: 0.862, alpha: 1.00))
     
     init(isShowing: Binding<Bool>, maxHeight: CGFloat, @ViewBuilder content: () -> Content) {
         _isShowing = isShowing
@@ -28,7 +29,7 @@ struct BottomSheetView<Content: View>: View {
     
     private var indicator: some View {
         RoundedRectangle(cornerRadius: 16)
-            .fill(Color.yellow)
+            .fill(Color.gray)
             .frame(
                 width: 48,
                 height: 5
@@ -37,7 +38,6 @@ struct BottomSheetView<Content: View>: View {
     
     func getMaxHeight(screenHeight: CGFloat) -> CGFloat {
         var value: CGFloat
-        print("MAX HEIGHT \(screenHeight)")
         if screenHeight < 600 {
             value = screenHeight * 0.75
         } else {
@@ -55,7 +55,7 @@ struct BottomSheetView<Content: View>: View {
                 self.content
             }
             .frame(width: geometry.size.width, height: getMaxHeight(screenHeight: self.maxHeight), alignment: .top)
-            .background(Color.white)
+            .background(bgColor)
             .cornerRadius(radius)
             .frame(height: geometry.size.height, alignment: .bottom)
             .offset(y: max(self.offset + self.translation, 0))
