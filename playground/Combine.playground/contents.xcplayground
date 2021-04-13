@@ -1,16 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='macos' display-mode='raw' buildActiveScheme='true'>
-    <pages>
-        <page name='Simplest Combine'/>
-        <page name='Subject - Passthrough'/>
-        <page name='Subject - CurrentValue'/>
-        <page name='Timer using Combine'/>
-        <page name='KVO'/>
-        <page name='JSON decoder'/>
-        <page name='JSON decoder - Combine'/>
-        <page name='JSON decoder - Combine 2'/>
-        <page name='JSON decode - Combine 3'/>
-        <page name='URL Session - simplest'/>
-        <page name='URL Session - no Combine'/>
-    </pages>
-</playground>
+<playground version='6.0' target-platform='macos' display-mode='raw' buildActiveScheme='true'/>

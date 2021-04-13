@@ -35,3 +35,4 @@ let cancellable2 = timer.sink(receiveCompletion: { _ in
 // This will start the timer and run the code block above.
 timer.connect()
 
+print("All Done")
