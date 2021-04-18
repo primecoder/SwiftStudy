@@ -2,9 +2,12 @@
  # Overview
  
  Show object serialisation from JSON string.
+ This playground shows examples of models auto generated using Quicktype.io
+ website.
  
  History:
  - 2021.03.14 Created by Ace
+ - 2021.04.18 Updated, added Manual Modeling
  
  */
 
