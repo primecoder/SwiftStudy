@@ -67,7 +67,8 @@ protocol EventServerDelegate {
     func eventsDidLoad()
 }
 
-let defaultServiceEndPoint = "http://pi-one:5000/events/api/v1.0/mock"
+//let defaultServiceEndPoint = "http://pi-one:5000/events/api/v1.0/mock"
+let defaultServiceEndPoint = "http://192.168.0.147:5000/events/api/v1.0/mock"
 
 /// Demonstrate Event service provider without using Combine.
 class EventService {

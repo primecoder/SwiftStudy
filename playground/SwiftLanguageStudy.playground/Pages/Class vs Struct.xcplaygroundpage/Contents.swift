@@ -15,7 +15,7 @@
  | - use by default              | - When mixed with Objective-C |
  | - faster mem allocation       | - When need control identity  |
  | - auto memberwise initialiser | - faster passing around func  |
- | - No === operator             | - Can use === operator        |
+ | - No === operator             | - Can use === operator        |   # Identity operator, i.e. point to the same memory
 
  ```
 
@@ -26,7 +26,9 @@
 
  - Author: Ace Authors
 
- - Date: 2020.09.24 - Created, Xcode 12, Swift 5.3
+ - History:
+    - 2020.09.24 - Created, Xcode 12, Swift 5.3
+    - 2021.03.15 - Revisited
 
  */
 
