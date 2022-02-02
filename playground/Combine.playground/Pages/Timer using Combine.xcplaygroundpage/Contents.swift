@@ -26,8 +26,8 @@ let cancellable2 = timer.sink(receiveCompletion: { _ in
     repeatCount += 1
     print("2> count=\(repeatCount), time: \(time)")
     if repeatCount >= 5 {
-        timer.connect().cancel()
-        cancellable.cancel()
+        timer.connect().cancel()    // Cancel the 2nd timer. Connect first then cancel.
+        cancellable.cancel()        // Cancel the first timer. See line 11
     }
 })
 
