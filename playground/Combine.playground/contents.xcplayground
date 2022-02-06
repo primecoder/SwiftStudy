@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='macos' display-mode='rendered' buildActiveScheme='true'>
+<playground version='6.0' target-platform='macos' display-mode='raw' buildActiveScheme='true'>
     <pages>
         <page name='Combine Study Note'/>
         <page name='JSON decode - Combine 3'/>
@@ -11,7 +11,9 @@
         <page name='Subject - CurrentValue'/>
         <page name='Subject - Passthrough'/>
         <page name='Timer using Combine'/>
+        <page name='URL Session - simplest non combine'/>
         <page name='URL Session - no Combine'/>
-        <page name='URL Session - simplest'/>
+        <page name='URL Session - Combine 1'/>
+        <page name='URL Session - Combine 2'/>
     </pages>
 </playground>
