@@ -5,7 +5,6 @@ struct Persons: Codable {
     let persons: [Person]
 }
 
-// MARK: - Person
 struct Person: Codable {
     let birthdate: String
     let id: Int
