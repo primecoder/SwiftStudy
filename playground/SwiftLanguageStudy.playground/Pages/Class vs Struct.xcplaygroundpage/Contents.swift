@@ -85,7 +85,7 @@ class ClassAA: ClassA {
 /// class object.
 func modifyObj1(structObj: StructA, classObj: ClassA) {
     print("modifyObj1(...)")
-    // Not Ok. Compiler gives warning.
+    // Not Ok. Compiler warning - Cannot assign to property...
     // structObj.name = "(modified) \(structObj.name)"
 
     // This is Ok.
