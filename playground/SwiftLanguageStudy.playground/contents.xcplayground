@@ -4,5 +4,7 @@
         <page name='Class vs Struct'/>
         <page name='Closure'/>
         <page name='Map, CompactMap, etc'/>
+        <page name='Concurrency'/>
+        <page name='ARC'/>
     </pages>
 </playground>
