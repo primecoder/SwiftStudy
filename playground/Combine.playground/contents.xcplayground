@@ -15,5 +15,6 @@
         <page name='URL Session - no Combine'/>
         <page name='URL Session - Combine 1'/>
         <page name='URL Session - Combine 2'/>
+        <page name='Timer + SwiftUI'/>
     </pages>
 </playground>
