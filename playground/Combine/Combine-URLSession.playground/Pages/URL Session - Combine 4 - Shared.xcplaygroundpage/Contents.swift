@@ -56,7 +56,7 @@ func sharedFetchPersons() -> AnyPublisher<People, Error> {
             return element.data
         })
         .decode(type: People.self, decoder: JSONDecoder())
-        .share()
+        .share()                                                            // <<-- Shared publishing here
         .eraseToAnyPublisher()
 }
 
