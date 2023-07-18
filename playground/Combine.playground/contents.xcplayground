@@ -17,6 +17,7 @@
         <page name='URL Session - Combine 2'/>
         <page name='SwiftUI Timer'/>
         <page name='Map vs TryMap'/>
-        <page name='URL Session - Combine 3'/>
+        <page name='URL Session - Combine 4 - Shared'/>
+        <page name='URL Session - Combine 3 - Error Handling'/>
     </pages>
 </playground>
