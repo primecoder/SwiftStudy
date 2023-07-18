@@ -61,6 +61,8 @@ class DataModel: ObservableObject {
         return fmt
     }()
     
+    // Timer.TimerPublisher conforms to `ConnectablePublisher` - so, use `connect()` or `autoconnect()` to
+    // start collecting data.
     private var timer = Timer.publish(every: 1, on: .main, in: .default)
     private var cancellable1: AnyCancellable?
     private var cancellable2: AnyCancellable?

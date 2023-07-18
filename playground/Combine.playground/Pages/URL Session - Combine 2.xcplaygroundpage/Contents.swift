@@ -1,23 +1,30 @@
+
 import Foundation
 import Combine
 
-struct Persons: Codable {
+struct People: Codable {
     let persons: [Person]
 }
 
 struct Person: Codable {
-    let birthdate: String
     let id: Int
-    let name, surname: String
+    let birthdate: String
+    let name: String
+    let surname: String
 }
 
+// Simple-REST-Services
+// Git: https://github.com/primecoder/Simple-REST-Services
+// [aa-20230718]
 let url = URL(string: "http://127.0.0.1:5000/persons")!
 
-func fetchPersons() -> AnyPublisher<Persons, Never> {
+// Reading network data using Combine.
+// See: https://developer.apple.com/documentation/foundation/urlsession/processing_url_session_data_task_results_with_combine
+func fetchPersons() -> AnyPublisher<People, Never> {
     return URLSession.shared.dataTaskPublisher(for: url)
         .map { $0.data}
-        .decode(type: Persons.self, decoder: JSONDecoder())
-        .replaceError(with: Persons(persons: [Person]()))
+        .decode(type: People.self, decoder: JSONDecoder())
+        .replaceError(with: People(persons: [Person]()))
         .eraseToAnyPublisher()
 }
 
@@ -38,8 +45,8 @@ print("End fetch ...")                                  // (3)
 func fetchPersons2() -> AnyPublisher<[Person], Never> {
     return URLSession.shared.dataTaskPublisher(for: url)
         .map { $0.data }
-        .decode(type: Persons.self, decoder: JSONDecoder())
-        .replaceError(with: Persons(persons: [Person]()))
+        .decode(type: People.self, decoder: JSONDecoder())
+        .replaceError(with: People(persons: [Person]()))
         .map { $0.persons }                                 // (4)
         .eraseToAnyPublisher()
 }
@@ -49,3 +56,5 @@ var cancellables2 = Set<AnyCancellable>()
 fetchPersons2()
     .sink { _ = $0.map { print("Fetch 2> \($0)") } }
     .store(in: &cancellables2)
+
+
