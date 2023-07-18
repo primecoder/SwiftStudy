@@ -76,3 +76,17 @@ let cancellable4 = sharedPublisher
         print("4) People: \(people.persons.count)")
     }
 
+let cancellable5 = sharedPublisher
+    .sink { completion in
+        print("5) Completed: \(completion)")
+    } receiveValue: { people in
+        print("5) People: \(people.persons.count)")
+    }
+
+let cancellable6 = sharedPublisher
+    .sink { completion in
+        print("6) Completed: \(completion)")
+    } receiveValue: { people in
+        print("6) People: \(people.persons.count)")
+    }
+
