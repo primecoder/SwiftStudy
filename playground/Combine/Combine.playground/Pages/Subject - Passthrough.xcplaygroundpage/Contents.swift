@@ -7,7 +7,7 @@ import Combine
 let subj = PassthroughSubject<String, Never>()
 
 // Connect publisher (a subject) to subscribers (closures).
-subj.sink
+//subj.sink
 let cancellable1 = subj.sink { (_) in
     print("Subscriber1 > Finished")
 } receiveValue: { (value) in
