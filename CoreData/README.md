@@ -6,3 +6,4 @@
 
 -   SwiftUI-CoreData-by-Ace (2023-08-09)
     -   Ace created and manage CoreData and shared between 2 targets: iOS and MacApp
+    -   Both targets share the same CoreData model (.xcdatamodeld), common code,and SwiftUI views
