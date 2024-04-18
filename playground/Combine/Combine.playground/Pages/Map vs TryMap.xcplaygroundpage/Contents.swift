@@ -9,12 +9,20 @@ func romanNumeral(from:Int) throws -> String {
     }
     return numeral
 }
-let numbers = [5, 4, 3, 2, 1, 0, 20, 2, 1]
-let cancellable = numbers.publisher
+let numbers = [5, 4, 3, 2, 1]
+let numbers2 = [5, 4, 3, 2, 1, 0, 20, 2, 1]
+let cancellable1 = numbers.publisher
     .tryMap { try romanNumeral(from: $0) }
     .sink(
         receiveCompletion: { print ("completion: \($0)") },
         receiveValue: { print ("\($0)", terminator: " ") }
         )
 
+
+let cancellable2 = numbers2.publisher
+    .tryMap { try romanNumeral(from: $0) }
+    .sink(
+        receiveCompletion: { print ("completion: \($0)") },
+        receiveValue: { print ("\($0)", terminator: " ") }
+    )
 
