@@ -2,12 +2,18 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Combine/Combine.playground">
+   </FileRef>
+   <FileRef
       location = "group:Combine/Combine-SwiftUI.playground">
    </FileRef>
    <FileRef
       location = "group:Combine/Combine-URLSession.playground">
    </FileRef>
    <FileRef
-      location = "group:Combine/Combine.playground">
+      location = "group:Customer Publisher - Built-in Wrapper.playground">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/random/git-repo/study/SwiftStudy/playground/Combine/Custom Publisher - My Own Publisher.playground">
    </FileRef>
 </Workspace>
