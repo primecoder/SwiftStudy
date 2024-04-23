@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <Group
+      location = "container:"
+      name = "My Own Publisher Subscriber">
+      <FileRef
+         location = "group:Custom Subscriber.playground">
+      </FileRef>
+      <FileRef
+         location = "group:/Users/random/git-repo/study/SwiftStudy/playground/Combine/Custom Publisher - My Own Publisher.playground">
+      </FileRef>
+      <FileRef
+         location = "group:Combine/Built-in Publisher.playground">
+      </FileRef>
+   </Group>
    <FileRef
       location = "group:Combine/Combine.playground">
    </FileRef>
@@ -9,11 +22,5 @@
    </FileRef>
    <FileRef
       location = "group:Combine/Combine-URLSession.playground">
-   </FileRef>
-   <FileRef
-      location = "group:Customer Publisher - Built-in Wrapper.playground">
-   </FileRef>
-   <FileRef
-      location = "group:/Users/random/git-repo/study/SwiftStudy/playground/Combine/Custom Publisher - My Own Publisher.playground">
    </FileRef>
 </Workspace>

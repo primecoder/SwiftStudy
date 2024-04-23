@@ -13,5 +13,13 @@
 
 
 import Cocoa
+import Combine
 
-var greeting = "Hello, playground"
+class MyPublisher: Publisher {
+    typealias Output = Date
+    typealias Failure = Never
+
+    func receive<S>(subscriber: S) where S : Subscriber, Never == S.Failure, Date == S.Input {
+        <#code#>
+    }
+}
